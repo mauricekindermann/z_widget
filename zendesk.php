@@ -1,7 +1,7 @@
 <?php
-define("ZDAPIKEY", "");//API Key
-define("ZDUSER", "");//email@yourdomain.com
-define("ZDURL", "");//https://yourdomain.zendesk.com/api/v2
+define("ZDAPIKEY", "API_KEY");
+define("ZDUSER", "email@yourdomain.com");
+define("ZDURL", "https://yourdomain.zendesk.com/api/v2");
 
 function curlWrap($url, $json)
 {
