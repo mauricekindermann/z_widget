@@ -1,5 +1,13 @@
 <html>
 <head>
+	<!--
+	index.html is used for the demo URL: 
+	https://mauricekindermann.github.io/z_widget/
+	
+	To integrate z_widget into your site, use the
+	index.php file.
+	-->
+
 	<title>Zendesk Custom Widget Demo</title>
     <link rel='shortcut icon' type='image/ico' href='favicon.ico'>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
@@ -200,13 +208,15 @@ $(document).ready(function() {
                 //Disable button after successful Submission
                 $('#submitContactModal').prop('disabled', true); 
 
-                //Process Zendesk API cURL Request
-                $.ajax({
-                    type: 'POST',
-                    url: 'zendesk.php',
-                    data: $('#contactModal').serialize(),
-                    success: function ()
-                    {
+				//NOTE: Skip ajax since this is the demo code only, use index.php
+
+               	//Process Zendesk API cURL Request
+               	//$.ajax({
+                    //type: 'POST',
+                    //url: 'zendesk.php',
+                    //data: $('#contactModal').serialize(),
+                    //success: function () {
+
                         //Show Success Message
                         $('#contactModal').closest('form').find("textarea").val("");
 
@@ -230,8 +240,8 @@ $(document).ready(function() {
                             //Show Help Button Again
                             $(button).show();
                         }, 2000);
-                    }
-                });
+                    //}
+               	//});
             }
         });
     });
